@@ -1,0 +1,6 @@
+mkdir student-management
+cd student-management
+npm init -y
+
+
+npm install express mongoose body-parser
