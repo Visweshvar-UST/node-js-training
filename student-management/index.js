@@ -8,9 +8,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/studentManagement',{
-    userNewUrlParser: true,
-    userUnifiedTopology: true,
+// mongoose.connect('mongodb://localhost:27017/studentManagement',{
+mongoose.connect('mongodb://127.0.0.1:27017/studentManagement',{
+    // userNewUrlParser: true,
+    // userUnifiedTopology: true,
 })
 .then(() => console.log('mongoDB connected'))
 .catch(err => console.log(err));

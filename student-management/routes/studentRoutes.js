@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 //1.fetch all student [POST]
 router.post('/', async (req, res) => {
-    const { name, email, phone } = req.body;
+    const { studentId, name } = req.body;
 
     const newStudent = new Student({
         studentId,
@@ -27,3 +27,5 @@ router.post('/', async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 });
+
+module.exports = router;
